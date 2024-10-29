@@ -1,8 +1,6 @@
-// app/components/LeaderboardTable.tsx
-
 'use client';
 
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TableHeader from './TableHeader';
 import TableComponent from './TableComponent';
 import { getRankedPlayersByCountry } from '@/services/apiServices';

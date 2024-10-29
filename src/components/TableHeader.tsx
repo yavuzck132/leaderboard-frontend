@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
+import React, { useEffect } from 'react';
+import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
 import { useLeaderboardContext } from '@/context/LeaderboardContext';
 
 
@@ -10,7 +10,7 @@ const TableHeader: React.FC<{ propHeaders: {header: string, headerKey: string}[]
     setHeaders(propHeaders)
   }, [])
 
-  const onDragEnd = (result: any) => {
+  const onDragEnd = (result: DropResult) => {
     if (!result.destination) return;
     const updatedHeaders = Array.from(headers);
     const [movedHeader] = updatedHeaders.splice(result.source.index, 1);

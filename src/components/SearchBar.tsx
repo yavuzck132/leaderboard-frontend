@@ -1,4 +1,3 @@
-// app/components/SearchSection.tsx
 "use client"
 
 import { useState, useEffect } from 'react'
