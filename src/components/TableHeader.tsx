@@ -36,9 +36,10 @@ const TableHeader: React.FC<{ propHeaders: {header: string, headerKey: string}[]
                   ref={provided.innerRef}
                   {...provided.draggableProps}
                   {...provided.dragHandleProps}
-                  className={`px-4 sm:px-0 py-2 text-white font-semibold cursor-pointer rounded hover:bg-gray-300 flex-1 items-center ${index === 0 ? "lg:pl-12" : "px-4"}`}
+                  className={`px-4 py-2 text-white font-semibold cursor-pointer rounded space-x-4 hover:bg-gray-300 flex-1 items-center 
+                    ${index === 0 && "sm:pl-10"}`}
                 >
-                  <div className={`flex ${index === headers.length - 1 ? 'justify-end lg:pr-8' : 'text-left'}`}>
+                  <div className={`flex`}>
                     <span>{header.header}</span>
                     <img 
                       src="./select-square-svgrepo-com.svg"
